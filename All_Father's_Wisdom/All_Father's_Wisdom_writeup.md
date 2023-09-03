@@ -63,18 +63,18 @@ so i coped all hex values from ghidra to txt file and write simple decoder which
 #!/usr/bin/python3
 
 with open('bytes.txt', 'r') as file:
-	byytes = file.read().splitlines()
+  byytes = file.read().splitlines()
 
 byyytes = []
 for b in byytes:
-	i = int(b, 16)
-	byyytes.append(i)
+  i = int(b, 16)
+  byyytes.append(i)
 
 flag = ""
 
 for byte in byyytes:
-	decoded = byte ^ 0x11
-	flag += chr(decoded)
+  decoded = byte ^ 0x11
+  flag += chr(decoded)
 
 print(flag)
 
@@ -92,18 +92,18 @@ I tried to convert these numbers from hex to characters, but the returned values
 '''
 
 with open('bytes.txt', 'r') as file:
-	byytes = file.read().splitlines()
+  byytes = file.read().splitlines()
 
 byyytes = []
 for b in byytes:
-	i = int(b, 16)
-	byyytes.append(i)
+  i = int(b, 16)
+  byyytes.append(i)
 
 hex_2 = ""
 
 for byte in byyytes[::-1]:
-	decode = byte ^ 0x11
-	hex_2 += chr(decode)
+  decode = byte ^ 0x11
+  hex_2 += chr(decode)
 
 hex_2 = hex_2.replace("*", "")
 hex_values = hex_2.split()
@@ -112,7 +112,7 @@ intigers = [int(value, 16) for value in hex_values]
 flag = ""
 
 for dec in intigers:
-	flag += chr(dec)
+  flag += chr(dec)
 
 print(flag)
 
