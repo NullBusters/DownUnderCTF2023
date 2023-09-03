@@ -57,7 +57,9 @@ under the declarated variables, function contains for loop which iterate by this
 
 so i coped all hex values from ghidra to txt file and write simple decoder which parse this txt file and on every single byte again does xor operation with key 0x11 and convert decimal xored value to ascii value (char)
 
+
 ''''
+
 #!/usr/bin/python3
 
 with open('bytes.txt', 'r') as file:
@@ -75,7 +77,9 @@ for byte in byyytes:
 	flag += chr(decoded)
 
 print(flag)
+
 '''
+
 
 script from hex values returns next hex values as chars?
 
@@ -84,7 +88,9 @@ d7 34 f5 47 03 e4 d2 35 13 f5 e6 13 46 f4 b7 64 45 34 55 44*</code>
 
 I tried to convert these numbers from hex to characters, but the returned values meant nothing. But when I started converting numbers from the end then i noticed that this is reversed flag, so I modified script:
 
+
 '''
+
 with open('bytes.txt', 'r') as file:
 	byytes = file.read().splitlines()
 
@@ -109,7 +115,9 @@ for dec in intigers:
 	flag += chr(dec)
 
 print(flag)
+
 '''
+
 
 flag:
 
