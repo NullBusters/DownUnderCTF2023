@@ -58,7 +58,7 @@ under the declarated variables, function contains for loop which iterate by this
 so i coped all hex values from ghidra to txt file and write simple decoder which parse this txt file and on every single byte again does xor operation with key 0x11 and convert decimal xored value to ascii value (char)
 
 <p align="center">
-    <img src="screenshoots/code1.png">
+    <img src="screenshoots/code1.PNG">
 </p>
 
 script from hex values returns next hex values as chars?
