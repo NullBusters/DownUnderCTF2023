@@ -10,7 +10,7 @@ It's important to see things from different perspectives.
 
 To task is attached binary file and source code of this binary writen in C. The solution is exploited this program using intiger overflow. Program asks the user for number and save this inputed number to 'unsigned shord idx' vatible type. From inputed value subtracted is 1 and this value (num_from_user - 1) can't be greater than or equal to 7.
 
-# when I inputed -1 program returns 'Segmentation fault' because minuses numbers are unsupported data types for unsigned varibles (unsigned means that it's value without char, and can stored only natural numbers from 0 to 'some value').
+when I inputed -1 program returns 'Segmentation fault' because minuses numbers are unsupported data types for unsigned varibles (unsigned means that it's value without char, and can stored only natural numbers from 0 to 'some value').
 
 <code>[12:38:31]:[michal@HACKERMAN]$ ./downunderflow
 Select user to log in as: -1
